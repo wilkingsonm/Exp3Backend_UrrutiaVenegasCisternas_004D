@@ -1,0 +1,151 @@
+#parrafos{
+    color: white;
+    text-align: center;
+    border: dashed 5px white;
+    border-radius: 20%;
+    padding: 4%;
+}
+
+#fondo{
+    background-color: transparent;
+}
+
+#contactos{
+    color: white;
+    text-align: center;
+}
+
+#carousel1{
+    border: rgb(146, 146, 146) 5px double;
+}
+
+#insta {
+    display: block;
+    margin: 0 auto;
+    max-width: 15%;
+    width: 5%;
+}
+
+footer{
+    background-size: 30px;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 5%;
+    margin-bottom: 40px;
+    font-size: 5vw;
+    font-family: tatoo;
+}
+h2{
+    padding-top: 10%;
+    font-family:tatoo;
+    text-align: center;
+    color: white ;
+    font-size: 4vw;
+}
+#margen{
+    margin-top: 10%;
+}
+
+@font-face {
+    font-family:tatoo ;
+    src: url(TATTI___.TTF);
+}
+ #quien{
+
+     font-family: cursive;
+     font-size: large;
+     border:dashed 5px white;
+     color: white;
+     text-align: justify;
+     padding:2% ;
+ }
+ body {
+    font-family: Arial;
+  }
+
+input {
+    float: left;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+label {
+    clear: both;
+    float: left;
+    width: 200px;
+    font-size: 22px;
+    color:white;
+
+}
+
+button {
+    clear: both;
+    float: left;
+    width: 60px;
+}
+
+.error-control {
+    border: 1px solid red;
+}
+
+label.error {
+    color: red;
+    width: 300px;
+    font-size: 0.8em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+
+
+#esti{
+    margin: 0 auto;
+    align-content: center;
+    border-radius: 10px;
+    width: 500px;
+    }
+    
+    #jorge{
+        font-size:20px ;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    #estilosuwu{
+        font-family: cursive;
+        margin-top:17% ;
+        font-size:15px;
+        border:dashed 5px white;
+        color: white;
+        text-align: justify;
+        padding:2% ;
+    } 
+
+    #caj{
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        margin: 20px;
+        color:white;
+      }
+      
+      #fechas{
+          margin-top: 5%;
+          color:white;
+      }
+
+      #feriados2021{
+          text-align: center;
+          color:white;
+          border:double 5px red;
+          
+          font-family: cursive;
+      }
+
+      #botoncito{
+          margin-left: 33%;
+      }
