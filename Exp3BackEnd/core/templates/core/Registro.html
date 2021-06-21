@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  {%load static%}
+  <title>Registro</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="{%static 'css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
+  <link rel="StyleSheet" href="{%static 'css/estilos.css'%}" type="text/css">
+</head>
+<body background="{%static 'img/Fondonegro.jpg'%}">
+  {%load static%}
+  <h1>Registro</h1>
+<!-- Menu navegacion -->
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{%static 'img/logo.png'%}" width="100" height="80" alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="opciones" >
+        <ul class="navbar-nav" style="color: black;">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Inicio<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'galeria' %}">Galeria de Fotos</a>
+          </li>       
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="width:500px; height: 500px;">
+    
+    <div class="row" id="caja">
+    <form class="col-xl col-sm col-lg col-mg" id="mi-formulario" action="index.html">
+
+        
+      <label>Correo Electrónico: </label>
+      <input type="email" onfocus="CambiaColor(this)" name="email" required placeholder="nombre@dominio.cl">
+    
+      <label>Telefono: </label>
+      <input type="tel" onfocus="CambiaColor(this)" name="fono" minlength="9" required>
+    
+      <label>Nombre: </label>
+      <input type="text" onfocus="CambiaColor(this)" name="nombre" minlength="1" required>
+
+      <label>Contraseña:</label>
+      <input type="password" onfocus="CambiaColor(this)" id="password" name="password" minlength="6" required>
+    
+      <label>Reingresa contraseña: </label>
+      <input type="password" onfocus="CambiaColor(this)" name="password2" minlength="6" required>
+    
+      
+      <button>Enviar</button>
+    
+    </form>
+    </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<script src="js/formulario.js"></script>
+<script>
+  function CambiaColor(a)
+  {
+      a.style.background = "red";
+  }
+</script>
+</body>
+<!-- Pie de pagina -->
+<footer class="py-5">
+  {%load static%}
+  <div class="container" id="fondo">
+    <p class="m-0" id="contactos" style="font-size: 13px;">David Cisternas - Jorge Venegas - Isidora Urrutia@Copyright &copy; Your Website 2021 </p>
+   <br>
+    <a href="https://instagram.com/krusty_ink?igshid=154kdd1lbewxx" target="_blank"><img src="{%static 'img/insta.png'%}" id="insta"></a>
+  </div>
+</footer>
+</html>
