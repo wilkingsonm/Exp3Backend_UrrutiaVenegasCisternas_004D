@@ -1,0 +1,8 @@
+en sql---------
+
+
+create user exp_3 identified by exp3;
+
+grant connect, resource to exp_3;
+
+alter user exp_3 default tablespace users quota unlimited on users;
