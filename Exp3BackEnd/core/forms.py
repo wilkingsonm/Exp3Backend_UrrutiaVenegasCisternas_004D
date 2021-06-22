@@ -13,7 +13,7 @@ class UsuarioForm(forms.ModelForm):
         labels ={
             'correo': 'Correo', 
             'nombre': 'Nombre', 
-            'motivo': 'Motivo', 
+            'motivo': 'Comentario', 
             'categoria': 'Categoría',
         }
         widgets={
@@ -31,10 +31,10 @@ class UsuarioForm(forms.ModelForm):
                     'id': 'nombre'
                 }
             ), 
-            'motivo': forms.TextInput(
+            'motivo': forms.Textarea(
                 attrs={
                     'class': 'form-control', 
-                    'placeholder': 'Ingrese motivo', 
+                    'placeholder': 'Ingrese su comentario', 
                     'id': 'motivo'
                 }
             ), 

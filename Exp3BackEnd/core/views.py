@@ -3,13 +3,6 @@ from .models import Usuario
 from .forms import UsuarioForm
 
 # Create your views here.
-def home(request):
-    nombre = 'Jorge Venegas'
-    
-    usuarios = Usuario.objects.all()  #similar al comando select
-
-    return render(request, 'home.html', context={'nom_usuario': nombre, 'datos': usuarios},
-    )
 
 def index(request):
 
@@ -22,14 +15,15 @@ def galeria(request):
     )
 
 def crearUsuario(request):
+    usuari = Usuario.objects.all() 
     if request.method=='POST': 
         usuario_form = UsuarioForm(request.POST)
         if usuario_form.is_valid():
             usuario_form.save()
-            return redirect('home')
+            return redirect('crearUsuario')
     else:
         usuario_form= UsuarioForm()
-    return render(request, 'core/form_crearusuario.html', {'usuario_form': usuario_form})
+    return render(request, 'core/form_crearusuario.html', {'usuario_form': usuario_form,'datos': usuari})
 
 def Ver(request):
     usuarios = Usuario.objects.all()

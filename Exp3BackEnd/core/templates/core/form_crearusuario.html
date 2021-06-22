@@ -39,7 +39,7 @@
         }); //$('#formulario').validate
     }); //function
 </script>
-    <title>crear usuario</title>
+    <title>Comentarios</title>
 </head>
 <body background="{%static 'img/Fondonegro.jpg'%}">
   {%load static%}
@@ -59,15 +59,15 @@
               <a class="nav-link" href="{% url 'galeria' %}">Galeria de Fotos</a>
             </li>   
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'crearUsuario' %}">crear usuario</a>
+              <a class="nav-link" href="{% url 'crearUsuario' %}">Comentarios</a>
             </li>           
           </ul>
         </div>
       </nav>
+      <br><br><br><br>
+      <h1>Crear un Comentario</h1>
       <div class="container">
+        
         <div class="row">
           <div class="row">
               <form method="POST" action="#" id="formulario">
@@ -89,12 +89,37 @@
                       {{usuario_form.categoria}}
                   </div>
                   <div class="form-group">
-                       <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+                      <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
                       <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
                   </div>
               </form>
           </div>
       </div>
+    </div>
+    <h1 style="text-align: center;">Listado de Comentarios</h1>
+    <div class="container" >
+      <div class="row" style="color: azure; text-align: center;">
+          <table border="1">
+              <tr>
+                  <td>Correo</td>
+                  <td>Nombre</td>
+                  <td>Motivo</td>
+                  <td>Categoria</td>
+              </tr>
+
+              {%for us in datos%}
+              <tr>
+                  <td>{{us.correo}}</td>
+                  <td>{{us.nombre}}</td>
+                  <td>{{us.motivo}}</td>
+                  <td>{{us.categoria}}</td>
+              </tr>
+              {%endfor%}
+          </table>
+
+          <a href="ver" class="btn btn-success">Ver</a>
+      </div>
+
     </div>
     
 </body>

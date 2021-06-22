@@ -18,12 +18,9 @@ class Categoria(models.Model):
 
 class Usuario(models.Model):
 
-    correo = models.CharField(max_length=6, primary_key=True, verbose_name='Correo')
-
+    correo = models.CharField(max_length=100, primary_key=True, verbose_name='Correo')
     nombre = models.CharField(max_length=20, verbose_name='Nombre')
-
-    motivo = models.CharField(max_length=20, verbose_name='Motivo')
-
+    motivo = models.CharField(max_length=150, verbose_name='Motivo')
     categoria = models.ForeignKey(Categoria, on_delete=CASCADE)
 
 

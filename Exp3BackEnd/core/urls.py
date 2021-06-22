@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import home,index,galeria,crearUsuario,Ver,form_mod_usuario, form_del_usuario
+from .views import index,galeria,crearUsuario,Ver,form_mod_usuario, form_del_usuario
 
 urlpatterns = [
 
-    path('home', home, name="home"),
     path('', index, name="index"),
     path('galeria', galeria, name="galeria"),
     path('crear_usuario', crearUsuario, name="crearUsuario"),

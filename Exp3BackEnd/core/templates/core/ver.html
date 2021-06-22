@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {%load static%}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="{%static 'css/estilos.css'%}" type="text/css">
     <title>Ver</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
        
 
 </head>
-<body>
-       <div class="row">
-            <h1>Mostrando usuarios</h1>
-        </div>
-        <table class="table">
+<body background="{%static 'img/Fondonegro.jpg'%}">
+    {%load static%} 
+        <br><br><br>
+        <h1>Mostrando usuarios</h1>
+        
+        <table class="table" style="color: azure;">
             <thead>
                 <tr>
                     <th scope="col">Correo</th>
@@ -40,7 +43,10 @@
 
             </tbody>
 
+
         </table>
+        
+        <a href="crear_usuario" class="btn btn-success">Volver</a>
 
  </body>
 </html>
