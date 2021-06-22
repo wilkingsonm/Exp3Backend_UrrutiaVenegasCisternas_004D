@@ -50,3 +50,9 @@ def form_mod_usuario(request,id):
             formulario.save()           #permite actualizar la info del objeto encontrado
             return redirect('ver')
     return render(request, 'core/form_mod_usuario.html', datos)
+
+def form_del_usuario(request,id):
+    usuario = Usuario.objects.get(correo=id)
+    usuario.delete()
+    return redirect('ver')
+
