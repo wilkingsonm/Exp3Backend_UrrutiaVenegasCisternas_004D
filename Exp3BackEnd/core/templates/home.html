@@ -8,41 +8,9 @@
     <link href="{%static 'css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
     <link rel="StyleSheet" href="{%static 'css/estilos.css'%}" type="text/css">
     <link rel="StyleSheet" href="{%static 'css/galeria.css'%}" type="text/css">
-    <script>
-      $(function() 
-      {
-        $("formulario").validate({
-             rules: {
-                    correo: "required",
-                    nombre: "required",
-                    motivo: "required",
-                    categoria: "required",
-                    },   
-                    
-               messages: 
-                {
-                correo: {
-                    required: 'Ingresa tu correo',
-                  },
-                nombre: {
-                    required: 'Ingresa nombre',
-                },
-                motivo:{
-                    required: 'Ingrese motivo',
-                    
-                },
-                categoria:{
-                    required: 'Seleccione una categoria',
-                },
-                 
-            }//messages
-        }); //$('#formulario').validate
-    }); //function
-</script>
-    <title>crear usuario</title>
+    <title>Ver Usuarios</title>
 </head>
 <body background="{%static 'img/Fondonegro.jpg'%}">
-  {%load static%}
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="z-index: 1;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
           <span class="navbar-toggler-icon"></span>
@@ -67,34 +35,30 @@
           </ul>
         </div>
       </nav>
-      <div class="container">
+    <div class="container">
         <div class="row">
-          <div class="row">
-              <form method="POST" action="#" id="formulario">
-                  {%csrf_token%}
-                  <div class="form-group">
-                      {{usuario_form.correo.label}}
-                      {{usuario_form.correo}}
-                  </div>
-                  <div class="form-group">
-                      {{usuario_form.nombre.label}}
-                      {{usuario_form.nombre}}
-                  </div>
-                  <div class="form-group">
-                      {{usuario_form.motivo.label}}
-                      {{usuario_form.motivo}}
-                  </div>
-                  <div class="form-group">
-                      {{usuario_form.categoria.label}}
-                      {{usuario_form.categoria}}
-                  </div>
-                  <div class="form-group">
-                       <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
-                      <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
-                  </div>
-              </form>
-          </div>
-      </div>
+            <h1>Listado de Usuarios</h1>
+        </div>
+        <div class="row">
+            <table border="1">
+                <tr>
+                    <td>Correo</td>
+                    <td>Nombre</td>
+                    <td>Motivo</td>
+                    <td>Categoria</td>
+                </tr>
+
+                {%for us in datos%}
+                <tr>
+                    <td>{{us.correo}}</td>
+                    <td>{{us.nombre}}</td>
+                    <td>{{us.motivo}}</td>
+                    <td>{{us.categoria}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+
     </div>
 </body>
 <footer class="py-5">

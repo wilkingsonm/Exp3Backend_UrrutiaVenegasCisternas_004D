@@ -3,7 +3,7 @@ from django.forms import ModelForm
 from django.forms import widgets
 from django.forms.models import ModelChoiceField
 from django.forms.widgets import Widget
-from .models import Categoria, Usuario
+from . models import Categoria, Usuario
 
 class UsuarioForm(forms.ModelForm):
 
@@ -34,7 +34,7 @@ class UsuarioForm(forms.ModelForm):
             'motivo': forms.TextInput(
                 attrs={
                     'class': 'form-control', 
-                    'placeholder': 'Ingrese por que le gusta el estilo', 
+                    'placeholder': 'Ingrese motivo', 
                     'id': 'motivo'
                 }
             ), 
